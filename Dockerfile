@@ -1,5 +1,5 @@
 FROM python:3.8-alpine3.11
-COPY server/* /usr/app
+COPY server/* /usr/app/
 WORKDIR /usr/app
 RUN pip install pipenv
 RUN pipenv install --skip-lock

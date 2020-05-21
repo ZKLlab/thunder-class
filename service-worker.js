@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.e18c1de651e0c14a82d2c148f9772f13.js"
+  "/precache-manifest.b8a8947618e822eb849b6a1300c4d0cd.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "thunder-class"});

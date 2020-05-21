@@ -1,7 +1,6 @@
-FROM python:3.8.2-alpine
+FROM python:3.8-alpine
 COPY server /app
 WORKDIR /app
-RUN pip install pipenv
-RUN pipenv install --skip-lock
+RUN pip install -r requirements.txt
 EXPOSE 5000
-ENTRYPOINT ["pipenv", "run", "main.py"]
+ENTRYPOINT ["python", "main.py"]

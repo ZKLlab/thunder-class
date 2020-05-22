@@ -174,6 +174,11 @@ async def disconnect(sid):
                 del rooms[room_id]['videos'][sid]
             except KeyError:
                 pass
+            if rooms[room_id]['screen'] == sid:
+                rooms[room_id]['screen'] = None
+                await sio.emit('screen', {
+                    'sid': None,
+                }, room=room_id)
         await sio.emit('leave', {
             'who': session.get('nick_name'),
             'members': rooms[room_id]['members'],

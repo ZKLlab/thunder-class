@@ -285,6 +285,7 @@ export default {
     socket.emit('start_screen_sharing');
   },
   stopScreenShare: () => {
+    screenStream = null;
     socket.emit('stop_screen_sharing');
   },
 };
